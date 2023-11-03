@@ -1,0 +1,2 @@
+# Js-examples
+Javascript Practices
