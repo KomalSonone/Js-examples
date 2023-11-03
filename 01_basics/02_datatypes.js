@@ -22,4 +22,5 @@ console.log(typeof new Date()); //object
 console.log(typeof function () {}); //function
 console.log(typeof myCar); //undefined
 console.log(typeof null); //object
+console.log(typeof undefined); //undefined
 console.log(typeof x);
