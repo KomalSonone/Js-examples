@@ -82,3 +82,30 @@ The method then selects elements from the start argument, and up to (but not inc
 */
 const fruits3=fruits.slice(1,3)
 console.log(fruits3);
+
+/*********Sorting an Array**********/
+//sort() method sorts an array alphabetically
+fruits.sort()
+console.log(fruits)
+//the sort() method will produce incorrect result when sorting numbers.
+//You can fix this by providing a compare function
+const points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b});
+//points.sort(function(a, b){return b - a}); //descending array
+points.sort(function(a,b){return a-b})
+console.log(points)
+
+//Fisher Yates Method - for sorting numbers
+const score = [45,75,62,50,83,49]
+ for (let i = score.length-1;i>0;i--){
+    let j = Math.floor(Math.random() * (i+1))
+    let k = score[i];
+    score[i]=score[j]
+    score[j]=k
+ }
+ console.log(score)
+
+
+//reverse() method reverses the elements in an array
+fruits.reverse()
+console.log(fruits)
