@@ -16,8 +16,8 @@ Array length
 Array toString()     Array join()
 Array pop()          Array delete
 Array push()         Array concat()
-Array shift()        Array flat()
-Array unshift()      Array splice()
+Array shift()        Array unshift()
+Array flat()         Array splice()
 Array slice()         */
 
 const fruits = ["Apple","Banana","Mango","Orange","Grapes"]
@@ -36,11 +36,17 @@ console.log(fruits)
 
 //(5) Array elements can be deleted using the JavaScript operator delete
 //Using delete leaves undefined holes in the array - use pop() instead
-//delete fruits[0];
-//console.log(fruits[0]); //undefined
+delete fruits[0];
+console.log(fruits[0]); //undefined
 
 //(6) push() method adds a new element to an array (at the end)
-fruits.push["Grapes"];
+fruits.push("Grapes");
 console.log(fruits); 
 
+//(7) concat() creates a new array by merging (concatenating) existing arrays
+const arr1 = [1,2,3];
+const arr2 = [4,5,6];
+const arr3 = arr1.concat(arr2); //stores in new array
+console.log(arr3)
 
+//(8) shift()
