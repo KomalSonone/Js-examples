@@ -36,8 +36,8 @@ console.log(fruits)
 
 //(5) Array elements can be deleted using the JavaScript operator delete
 //Using delete leaves undefined holes in the array - use pop() instead
-delete fruits[0];
-console.log(fruits[0]); //undefined
+//delete fruits[0];
+//console.log(fruits[0]); //undefined
 
 //(6) push() method adds a new element to an array (at the end)
 fruits.push("Grapes");
@@ -49,4 +49,36 @@ const arr2 = [4,5,6];
 const arr3 = arr1.concat(arr2); //stores in new array
 console.log(arr3)
 
-//(8) shift()
+
+//(8) shift() method removes the first array element
+console.log(arr1.shift())
+
+//(9) unshift() method adds a new element to an array (at the beginning)
+fruits.unshift("Kiwi")
+console.log(fruits)
+
+//(10) flat() - reducing the dimensionality of an array.
+const myArr = [[1,2],[3,4],[5,6]];
+const newArr = myArr.flat();
+console.log(newArr)
+//(12) splice() method can be used to add new items to an array
+/*The first parameter (2) defines the position where new elements should be added (spliced in).
+The second parameter (0) defines how many elements should be removed.
+The rest of the parameters ("Lemon" , "Strawberry") define the new elements to be added
+*/
+fruits.splice(2, 0, "Lemon", "Strawberry");
+console.log(fruits)
+
+fruits.splice(2, 2, "Guava", "Pear"); //returns an array with the deleted items
+console.log(fruits) 
+
+//(11) slice() method slices out a piece of an array
+console.log(fruits)
+//Note- The slice() method creates a new array.
+const fruits2=fruits.slice(3)
+console.log(fruits2);
+/*The slice() method can take two arguments like slice(1, 3).
+The method then selects elements from the start argument, and up to (but not including) the end argument.
+*/
+const fruits3=fruits.slice(1,3)
+console.log(fruits3);
