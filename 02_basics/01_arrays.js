@@ -9,6 +9,7 @@ for(i=0;i<cars2.length;i++) {
     console.log(cars2[i])
 }
 console.log(Array.isArray(cars)) //true
+console.log(Array.from("John"))
 
 /******************Array methods*******************/
 /*
@@ -61,6 +62,7 @@ console.log(fruits)
 const myArr = [[1,2],[3,4],[5,6]];
 const newArr = myArr.flat();
 console.log(newArr)
+
 //(12) splice() method can be used to add new items to an array
 /*The first parameter (2) defines the position where new elements should be added (spliced in).
 The second parameter (0) defines how many elements should be removed.
@@ -94,16 +96,6 @@ points.sort(function(a, b){return a - b});
 //points.sort(function(a, b){return b - a}); //descending array
 points.sort(function(a,b){return a-b})
 console.log(points)
-
-//Fisher Yates Method - for sorting numbers
-const score = [45,75,62,50,83,49]
- for (let i = score.length-1;i>0;i--){
-    let j = Math.floor(Math.random() * (i+1))
-    let k = score[i];
-    score[i]=score[j]
-    score[j]=k
- }
- console.log(score)
 
 
 //reverse() method reverses the elements in an array
